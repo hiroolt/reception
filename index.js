@@ -17,6 +17,10 @@ io.on('connection', function(socket){
     console.log('message: ' + msg);
     io.emit('call', msg);
   });
+  socket.on('innovation', function(name){
+    console.log('message: ' + name);
+    io.emit('innovation', name);
+  });
 });
 
 

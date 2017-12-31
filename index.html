@@ -14,6 +14,13 @@
     </style>
   </head>
   <body>
+    <h1>誰を呼びますか？</h1>
+
+    <p id="mori">森さん</p>
+    <p id="yokoo">横尾さん</p>
+    <p id="katou">加藤さん</p>
+    <p id="takashi">堯志さん</p>
+    <p id="sunagawa">砂川さん</p>
 
     <ul id="messages"></ul>
     <form action="">
@@ -25,9 +32,35 @@
     <script>
       $(function () {
         var socket = io();
+        var name = '';
           $('form').submit(function(){
             socket.emit('call', $('#m').val());
             $('#m').val('');
+            return false;
+          });
+          $('#mori').click(function(){
+            name = "mori";
+            socket.emit('innovation', name);
+            return false;
+          });
+          $('#yokoo').click(function(){
+            name = "yokoo";
+            socket.emit('innovation', name);
+            return false;
+          });
+          $('#katou').click(function(){
+            name = "katou";
+            socket.emit('innovation', name);
+            return false;
+          });
+          $('#takashi').click(function(){
+            name = "takashi";
+            socket.emit('innovation', name);
+            return false;
+          });
+          $('#sunagawa').click(function(){
+            name = "sunagawa";
+            socket.emit('innovation', name);
             return false;
           });
         });
