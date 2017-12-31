@@ -11,3 +11,19 @@ socket.on('call', function(msg){
     console.log(msg);
     new sound('assets/sounds/sample.wav').play();
 });
+
+// receive specific name from the host
+
+socket.on('innovation', function(name){
+    console.log(name);
+    switch(name) {
+       case "mori":
+           new sound('assets/sounds/sample.wav').play(); 
+           break;
+       case "yokoo":
+           new sound();
+           break;
+       default:
+           break;
+    }
+});
