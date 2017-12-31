@@ -17,13 +17,22 @@ socket.on('call', function(msg){
 socket.on('innovation', function(name){
     console.log(name);
     switch(name) {
-       case "mori":
-           new sound('assets/sounds/sample.wav').play(); 
-           break;
-       case "yokoo":
-           new sound();
-           break;
-       default:
-           break;
+      case "mori":
+        new sound('assets/sounds/mori.wav').play();
+        break;
+      case "yokoo":
+        new sound('assets/sounds/yokoo.wav').play(); 
+        break;
+      case "katou":
+        new sound('assets/sounds/katou.wav').play();
+        break;
+      case "takashi":
+        new sound('assets/sounds/takashi.wav').play();
+        break;
+      case "sunagawa":
+        new sound('assets/sounds/sunagawa.wav').play();
+        break;
+      default:
+        break;
     }
 });
