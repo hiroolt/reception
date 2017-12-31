@@ -15,6 +15,7 @@ io.on('connection', function(socket){
   });
   socket.on('call', function(msg){
     console.log('message: ' + msg);
+    io.emit('call', msg);
   });
 });
 
