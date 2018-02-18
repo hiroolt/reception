@@ -21,7 +21,7 @@ socket.on('innovation', function(name){
         new sound('assets/sounds/mori.wav').play();
         break;
       case "yokoo":
-        new sound('assets/sounds/yokoo.wav').play(); 
+        new sound('assets/sounds/yokoo.wav').play();
         break;
       case "katou":
         new sound('assets/sounds/katou.wav').play();
@@ -31,6 +31,21 @@ socket.on('innovation', function(name){
         break;
       case "sunagawa":
         new sound('assets/sounds/sunagawa.wav').play();
+        break;
+      case "sugimura":
+        new sound('assets/sounds/sugimura.wav').play();
+        break;
+      case "hosokawa":
+        new sound('assets/sounds/hosokawa.wav').play();
+        break;
+      case "deshimaru":
+        new sound('assets/sounds/deshimaru.wav').play();
+        break;
+      case "takemura":
+        new sound('assets/sounds/takemura.wav').play();
+        break;
+      case "nishiumi":
+        new sound('assets/sounds/nishiumi.wav').play();
         break;
       default:
         break;

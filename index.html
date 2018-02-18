@@ -11,11 +11,6 @@
 
   <body>
 
-  <!-- Banner -->
-    <section id="banner">
-      <h2>情報化戦略部受付システム</h2>
-    </section>
-
     <!-- One -->
       <section id="one" class="wrapper special">
         <div class="inner">
@@ -53,13 +48,13 @@
 <hr />
 
     <h2><b>情報化戦略部</b></h2>
-    <h2><a id="mori" class="button fit">部長　筒井</a> </h2>
-    <h2><a id="mori" class="button fit">CIO補佐官　木村</a> </h2>
+    <h2><a id="#" class="button fit">部長　筒井</a> </h2>
+    <h2><a id="#" class="button fit">CIO補佐官　木村</a> </h2>
 
 <hr />
 
     <h2><b>イノベーション課</b></h2>
-    <h2><a id="mori" class="button fit">課長　森</a> </h2>
+    <h2><a id="mori" class="button fit">課長　森</a></h2>
     <h3><b>イノベーション担当</b></h3>
       <ul class="actions fit">
         <li><h2><a id="yokoo" class="button fit">横尾　ケンタロー</a> </h2></li>
@@ -73,15 +68,15 @@
 
       <h3><b>マイナンバー利活用</b></h3>
         <ul class="actions fit">
-          <li><h2><a id="yokoo" class="button fit">杉村　ヨウコ</a> </h2></li>
-          <li><h2><a id="sunagawa" class="button fit">細川　ミホ</a> </h2></li>
+          <li><h2><a id="sugimura" class="button fit">杉村　ヨウコ</a> </h2></li>
+          <li><h2><a id="hosokawa" class="button fit">細川　ミホ</a> </h2></li>
         </ul>
 
       <h3><b>マイナンバー制度担当</b></h3>
-        <h2><a id="katou" class="button fit">西海さん</a> </h2>
+        <h2><a id="knishiumi" class="button fit">西海さん</a> </h2>
         <ul class="actions fit">
-          <li><h2><a id="katou" class="button fit">弟子丸さん</a> </h2></li>
-          <li><h2><a id="takashi" class="button fit">杉村さん</a> </h2></li>
+          <li><h2><a id="deshimaru" class="button fit">弟子丸さん</a> </h2></li>
+          <li><h2><a id="takemura" class="button fit">竹村さん</a> </h2></li>
         </ul>
 
   </div>
@@ -96,12 +91,12 @@
       <h2>要件を選択する</h2>
     </header>
 
-    <h2><a id="mori" class="button special fit">荷物の配達</a> </h2>
-    <h2><a id="mori" class="button fit">イントラカード</a> </h2>
-    <h2><a id="mori" class="button special fit">あじさいネット</a> </h2>
-    <h2><a id="mori" class="button fit">タブレット</a> </h2>
-    <h2><a id="mori" class="button special fit">営業の挨拶</a> </h2>
-    <h2><a id="mori" class="button fit">その他</a> </h2>
+    <h2><a id="#" class="button special fit">荷物の配達</a> </h2>
+    <h2><a id="#" class="button fit">イントラカード</a> </h2>
+    <h2><a id="#" class="button special fit">あじさいネット</a> </h2>
+    <h2><a id="#" class="button fit">タブレット</a> </h2>
+    <h2><a id="#" class="button special fit">営業の挨拶</a> </h2>
+    <h2><a id="#" class="button fit">その他</a> </h2>
 
   </div>
 </section>
@@ -140,6 +135,31 @@
           });
           $('#sunagawa').click(function(){
             name = "sunagawa";
+            socket.emit('innovation', name);
+            return false;
+          });
+          $('sugimura').click(function(){
+            name = "sugimura";
+            socket.emit('innovation', name);
+            return false;
+          });
+          $('#hosokawa').click(function(){
+            name = "hosokawa";
+            socket.emit('innovation', name);
+            return false;
+          });
+          $('#deshimaru').click(function(){
+            name = "deshimaru";
+            socket.emit('innovation', name);
+            return false;
+          });
+          $('#takemura').click(function(){
+            name = "takemura";
+            socket.emit('innovation', name);
+            return false;
+          });
+          $('#nishiumi').click(function(){
+            name = "nishiumi";
             socket.emit('innovation', name);
             return false;
           });
