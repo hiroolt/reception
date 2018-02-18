@@ -1,6 +1,6 @@
 "use strict";
 var io = require('socket.io-client');
-var socket = io('http://192.168.2.105:3000').connect();
+var socket = io('http://172.20.10.6:3000').connect();
 var sound = require('node-aplay');
 
 // allow local file read

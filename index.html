@@ -1,31 +1,111 @@
 <!doctype html>
 <html>
   <head>
-    <title>Reception</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-    </style>
+    <title>Typify by TEMPLATED</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
   </head>
+
   <body>
-    <h1>誰を呼びますか？</h1>
 
-    <p id="mori">森さん</p>
-    <p id="yokoo">横尾さん</p>
-    <p id="katou">加藤さん</p>
-    <p id="takashi">堯志さん</p>
-    <p id="sunagawa">砂川さん</p>
+  <!-- Banner -->
+    <section id="banner">
+      <h2>情報化戦略部受付システム</h2>
+    </section>
 
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
+    <!-- One -->
+      <section id="one" class="wrapper special">
+        <div class="inner">
+          <header class="major">
+            <h2>どうやって呼び出し相手を探しますか？</h2>
+          </header>
+          <div class="features">
+            <div class="feature">
+              <a href="#two">
+              <i class="fa fa-paper-plane-o"></i>
+              <h3>係・担当者の名前</h3>
+              <p>係や担当者の名前で探す</p>
+            </a>
+            </div>
+            <div class="feature">
+              <a href="#three">
+              <i class="fa fa-diamond"></i>
+              <h3>要件から探す</h3>
+              <p>マイナンバー交付<br>郵便物の配送のなど</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<hr />
+
+<!-- Two -->
+<section id="two" class="wrapper special">
+  <div class="inner">
+    <header class="major">
+      <h2>係・個人の名前を選択する</h2>
+    </header>
+
+<hr />
+
+    <h2><b>情報化戦略部</b></h2>
+    <h2><a id="mori" class="button fit">部長　筒井</a> </h2>
+    <h2><a id="mori" class="button fit">CIO補佐官　木村</a> </h2>
+
+<hr />
+
+    <h2><b>イノベーション課</b></h2>
+    <h2><a id="mori" class="button fit">課長　森</a> </h2>
+    <h3><b>イノベーション担当</b></h3>
+      <ul class="actions fit">
+        <li><h2><a id="yokoo" class="button fit">横尾　ケンタロー</a> </h2></li>
+        <li><h2><a id="sunagawa" class="button fit">砂川　ヒロキ</a> </h2></li>
+      </ul>
+
+      <ul class="actions fit">
+        <li><h2><a id="katou" class="button fit">加藤　マリエ</a> </h2></li>
+        <li><h2><a id="takashi" class="button fit">堯志　ヒロユキ</a> </h2></li>
+      </ul>
+
+      <h3><b>マイナンバー利活用</b></h3>
+        <ul class="actions fit">
+          <li><h2><a id="yokoo" class="button fit">杉村　ヨウコ</a> </h2></li>
+          <li><h2><a id="sunagawa" class="button fit">細川　ミホ</a> </h2></li>
+        </ul>
+
+      <h3><b>マイナンバー制度担当</b></h3>
+        <h2><a id="katou" class="button fit">西海さん</a> </h2>
+        <ul class="actions fit">
+          <li><h2><a id="katou" class="button fit">弟子丸さん</a> </h2></li>
+          <li><h2><a id="takashi" class="button fit">杉村さん</a> </h2></li>
+        </ul>
+
+  </div>
+</section>
+
+<hr />
+
+<!-- Three -->
+<section id="three" class="wrapper special">
+  <div class="inner">
+    <header class="major">
+      <h2>要件を選択する</h2>
+    </header>
+
+    <h2><a id="mori" class="button special fit">荷物の配達</a> </h2>
+    <h2><a id="mori" class="button fit">イントラカード</a> </h2>
+    <h2><a id="mori" class="button special fit">あじさいネット</a> </h2>
+    <h2><a id="mori" class="button fit">タブレット</a> </h2>
+    <h2><a id="mori" class="button special fit">営業の挨拶</a> </h2>
+    <h2><a id="mori" class="button fit">その他</a> </h2>
+
+  </div>
+</section>
+
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/jquery/dist/jquery.js"></script>
@@ -64,6 +144,20 @@
             return false;
           });
         });
+    </script>
+
+    <script type="text/javascript" src="assets/js/accordion.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#only-one [data-accordion]').accordion();
+        $('#multiple [data-accordion]').accordion({
+          singleOpen: false
+        });
+        $('#single[data-accordion]').accordion({
+          transitionEasing: 'cubic-bezier(0.455, 0.030, 0.515, 0.955)',
+          transitionSpeed: 200
+        });
+      });
     </script>
 
   </body>
